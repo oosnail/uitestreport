@@ -8,12 +8,6 @@
 
 import Foundation
 
-class successNum {
-    static let sharedInstance = successNum()
-    var successnum:Int = 0
-    private init() {} //This prevents others from using the default '()' initializer for this class.
-}
-
 enum Status: String {
     case unknown = ""
     case failure = "Failure"
@@ -93,9 +87,6 @@ struct Test: HTML
 
         let rawStatus = dict["TestStatus"] as? String ?? ""
         status = Status(rawValue: rawStatus)!
-        if status == .success{
-            successNum.sharedInstance.successnum = successNum.sharedInstance.successnum + 1
-        }
     }
 
     // PRAGMA MARK: - HTML

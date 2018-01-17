@@ -20,12 +20,41 @@ struct testModel{
     var status: Status
     var objectClass: ObjectClass
     
+    //多少个test
     var amountSubTests: Int {
         if let subTests = subTests {
             let a = subTests.reduce(0) { $0 + $1.amountSubTests }
             return a == 0 ? subTests.count : a
         }
         return 0
+    }
+    
+    //多少个成功test
+    var amountSuccessTests: Int {
+        if let subTests = subTests {
+            let a = subTests.reduce(0) { $0 + $1.amountSuccessTests }
+            return a
+        }else{
+            if status == .success{
+                return 1
+            }else{
+                return 0
+            }
+        }
+    }
+    
+    //多少个成功test
+    var amountFailTests: Int {
+        if let subTests = subTests {
+            let a = subTests.reduce(0) { $0 + $1.amountFailTests }
+            return a
+        }else{
+            if status == .failure{
+                return 1
+            }else{
+                return 0
+            }
+        }
     }
     
     
@@ -42,15 +71,8 @@ struct testModel{
             subTests = rawSubTests.map { testModel( dict: $0) }
         }
         
-//        if let rawActivitySummaries = dict["ActivitySummaries"] as? [[String : Any]] {
-//            activities = rawActivitySummaries.map { Activity(root: root, dict: $0, padding: 20) }
-//        }
-        
         let rawStatus = dict["TestStatus"] as? String ?? ""
         status = Status(rawValue: rawStatus)!
-//        if status == .success{
-//            successNum.sharedInstance.successnum = successNum.sharedInstance.successnum + 1
-//        }
     }
 }
 
@@ -67,18 +89,57 @@ struct chartModel{
 
 //最终返回的model
 struct resultModel{
-    var device : TargetDevice
-    var overview : Array<chartModel>
+    var device :  Dictionary<String, Any>
+    var overview : Array<chartModel>{
+        return self.overviewData()
+    }
+    var testModel :testModel
     //测试套
-    var suites : Dictionary<String, Any>
+    var suites : Dictionary<String, Any>{
+        return self.suiteData()
+    }
     //时间
     var duration : Dictionary<String, Any>
+    
+    init(device:TargetDevice, testData: testModel) {
+        self.testModel = testData
+        self.device = device.dictionary
+        self.duration = ["1":"2"]
+    }
+    
     var dictionary: [String: Any] {
         return [
-            "device": device.dictionary,
+            "device": device,
             "overview": overview,
             "suites":suites,
             "duration":duration
         ]
     }
+    
+    func overviewData()->Array<chartModel>{
+        let success = self.testModel.amountSuccessTests
+        let fail = self.testModel.amountSubTests - success
+        let chartModel1 = chartModel.init(value: fail, name: "失败")
+        let chartModel2 = chartModel.init(value: success, name: "成功")
+        return [chartModel1,chartModel2]
+    }
+    
+    func suiteData()->Dictionary<String, Any>{
+        let names = self.testModel.subTests?.map({$0.name})
+        let successs = self.testModel.subTests?.map({$0.amountSuccessTests})
+        let fails = self.testModel.subTests?.map({$0.amountFailTests})
+        var suites = Array<Dictionary<String, Any>>()
+        for index in 0...(names?.count)!-1 {
+            let name  = names![index]
+            let chartModel1 = chartModel.init(value: successs![index], name: "成功")
+            let chartModel2 = chartModel.init(value: fails![index], name: "失败")
+            let dic = [name:[chartModel1,chartModel2]]
+            suites.append(dic)
+        }
+        
+        print("suites:=========>\(suites)")
+        return ["1":"2"]
+    }
+    
+    
 }

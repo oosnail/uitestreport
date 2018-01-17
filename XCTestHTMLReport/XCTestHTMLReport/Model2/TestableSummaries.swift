@@ -10,8 +10,9 @@ import Foundation
 
 class TestableSummaries{
     private let filename = "action_TestSummaries.plist"
-    var runs = [runTest]()
+//    var runs = [runTest]()
     var tests = [Test]()
+    
     init(root: String)
     {
         Logger.step("Parsing Test Summaries")
@@ -32,31 +33,23 @@ class TestableSummaries{
             exit(EXIT_FAILURE)
         }
         
-        for path in plistPath {
-            let run = runTest(root: root, path: path)
-            runs.append(run)
-        }
+        let path = plistPath[0]
+        let run = runTest(root: root, path: path)
+        run.setResult()
+//        for path in plistPath {
+//            let run = runTest(root: root, path: path)
+//            runs.append(run)
+//        }
         
     }
-    //设置本地文件
-    func setDestination(){
-        
-    }
-    
-    var Value: [String: String] {
-        return [
-            "aa": "aa",
-            "bb": "bb"
-        ]
-    }
-    
+
 }
 
 //一次run 可以不同的手机
 class runTest:NSObject{
     private let activityLogsFilename = "action.xcactivitylog"
 
-//    var testSummaries: [TestSummary]
+    var testData : testModel
     var targetDevice :TargetDevice
     
     init(root: String, path: String)
@@ -70,45 +63,27 @@ class runTest:NSObject{
             Logger.error("Failed to parse the content of \(fullpath)")
             exit(EXIT_FAILURE)
         }
+        //设备信息
+        let dic = dict!["RunDestination"] as! [String : Any]
+        self.targetDevice = TargetDevice(dict: dic["TargetDevice"] as! [String : Any])
         
+        //数据信息
         let dic2 = dict!["TestableSummaries"] as! [[String: Any]]
         let dic3 = dic2[0]
         let rawTests = dic3["Tests"] as! [[String: Any]]
         let dic4 = rawTests[0]
         let array = dic4["Subtests"] as! [[String: Any]]
         let dic5 = array[0]
-        let model = testModel.init(dict: dic5)
-        print(model.amountSubTests)
-        
-        
-        
-        let tests = rawTests.map { Test(root: root, dict: $0) }
-        let total = tests.reduce(0) { $0 + $1.amountSubTests }
-        let dic = dict!["RunDestination"] as! [String : Any]
-        self.targetDevice = TargetDevice(dict: dic["TargetDevice"] as! [String : Any])
-        
-        var rootdic = Dictionary<String, Any>()
-        let targetdic =  self.targetDevice.dictionary
-        rootdic["device"] = targetdic
-        
-        var overview = Dictionary<String, Any>()
-        overview["total"] = total
-        overview["succes"] = successNum.sharedInstance.successnum
-        rootdic["overview"] = overview
+        self.testData = testModel.init(dict: dic5)
+//        file.write(dict: rootdic, name: "demo.json")
 
-        file.write(dict: rootdic, name: "demo.json")
-
-        print("总case数目:\(total)")
-        print( "成功case数目: \(successNum.sharedInstance.successnum)")
     }
     
     func addlog(_ fullpath:String){
         Logger.substep("Parsing Activity Logs")
         let parentDirectory = fullpath.dropLastPathComponent()
         Logger.substep("Searching for \(activityLogsFilename) in \(parentDirectory)")
-        
         let logsPath = parentDirectory + "/" + activityLogsFilename
-        
         
         if !FileManager.default.fileExists(atPath: logsPath) {
             Logger.warning("Failed to find \(activityLogsFilename) in \(parentDirectory). Not appending activity logs to report.")
@@ -157,6 +132,12 @@ class runTest:NSObject{
             }
     }
     
+}
+    
+    func setResult(){
+        let res = resultModel.init(device: self.targetDevice, testData: self.testData)
+        print(res.dictionary)
+    }
     
     var value: [String: Any] {
         return [
@@ -164,10 +145,9 @@ class runTest:NSObject{
             "TEST_SUMMARIES": ""
         ]
     }
-    
-}
 
 }
+
 
 class file: NSObject {
     class func write(dict:Dictionary<String, Any>,name:String) -> Void {
