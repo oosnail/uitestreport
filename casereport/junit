@@ -1,0 +1,714 @@
+
+<testsuites tests="10" failures="2" name=" ( )">
+    <testsuite name=" ( ) XCTestWDUITests.XCTestAccout" tests="7" failures="1">
+        <testcase classname=" ( ) XCTestWDUITests.XCTestAccout" name="testaddress" time="77.349"></testcase>
+        <testcase classname=" ( ) XCTestWDUITests.XCTestAccout" name="testchangeheader" time="81.738"></testcase>
+        <testcase classname=" ( ) XCTestWDUITests.XCTestAccout" name="testcheckPath" time="61.036"></testcase>
+        <testcase classname=" ( ) XCTestWDUITests.XCTestAccout" name="testLogin" time="53.086"></testcase>
+        <testcase classname=" ( ) XCTestWDUITests.XCTestAccout" name="testlogout" time="55.077"></testcase>
+        <testcase classname=" ( ) XCTestWDUITests.XCTestAccout" name="testmodifypassword" time="64.168"></testcase>
+        <testcase classname=" ( ) XCTestWDUITests.XCTestAccout" name="testmodifyPayPassword" time="54.474">
+            <failure message="Failed to scroll to visible (by AX action) Other, 0x1c019d9b0, traits: 8589934592, error: Error -25204 performing AXAction 2003 on element &lt;XCAccessibilityElement: 0x15fe28f90&gt; pid: 5842, elementOrHash.elementID: 7720038784.378">&lt;unknown&gt;:0</failure>
+            <system-out>Start Test at 2018-01-15 15:12:08.827
+Terminate me.ele.ios.XCCase:5838
+Wait for me.ele.ios.XCCase to idle
+Launch me.ele.ios.XCCase
+Open me.ele.ios.XCCase
+Wait for me.ele.ios.XCCase to idle
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type Button
+Find: Elements matching predicate '"重置环境" IN identifiers'
+Wait for me.ele.ios.XCCase to idle
+Find the "重置环境" Button
+Synthesize event
+Wait for me.ele.ios.XCCase to idle
+Tap "重置环境" Button
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5840
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Wait for accessibility to load
+Wait for me.ele.ios.qpagent to idle
+Launch me.ele.ios.qpagent
+Open me.ele.ios.qpagent
+Snapshot accessibility hierarchy for app with pid 5842
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Button
+Find: Elements matching predicate '"知道了" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Button
+Find: Elements matching predicate '"知道了" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Find the "知道了" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "知道了" Button
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Sheet
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the Alert
+Snapshot accessibility hierarchy for app with pid 5842
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Sheet
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the Alert
+Snapshot accessibility hierarchy for app with pid 5842
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find: Descendants matching type Button
+Get all elements bound by index for: Descendants matching type Button
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the "“饿了么”想给您发送通知" Alert
+Wait for com.apple.springboard to idle
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find: Descendants matching type Button
+Find: Element at index 1
+Wait for com.apple.springboard to idle
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Check for UI interruption: Descendants matching type Alert
+Find the Button
+Synthesize event
+Wait for com.apple.springboard to idle
+Tap Button
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Sheet
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the Alert
+Snapshot accessibility hierarchy for app with pid 5842
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Sheet
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the Alert
+Snapshot accessibility hierarchy for app with pid 5842
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find: Descendants matching type Button
+Get all elements bound by index for: Descendants matching type Button
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the "“饿了么”想给您发送通知" Alert
+Wait for com.apple.springboard to idle
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find: Descendants matching type Button
+Find: Element at index 1
+Wait for com.apple.springboard to idle
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Check for UI interruption: Descendants matching type Alert
+Find the Button
+Synthesize event
+Wait for com.apple.springboard to idle
+Tap Button
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Button
+Find: Elements matching predicate '"关闭" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Button
+Find: Elements matching predicate '"关闭" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Alert
+Check for UI interruption: Descendants matching type Alert
+Find the "关闭" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "关闭" Button
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type TabBar
+Find: Descendants matching type Button
+Find: Elements matching predicate '"我的" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Find the "我的" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "我的" Button
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type NavigationBar
+Find the NavigationBar
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Table
+Find: Descendants matching type Cell
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Table
+Find: Descendants matching type Cell
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Find the Cell
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap Cell
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Button
+Find: Elements matching predicate '"密码登录" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Button
+Find: Elements matching predicate '"密码登录" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Find the "密码登录" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "密码登录" Button
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type NavigationBar
+Find the NavigationBar
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type TextField
+Find: Elements matching predicate 'placeholderValue == "手机/邮箱/用户名"'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type TextField
+Find: Elements matching predicate 'placeholderValue == "手机/邮箱/用户名"'
+Wait for me.ele.ios.qpagent to idle
+Find the TextField
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap TextField
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type TextField
+Find: Elements matching predicate 'placeholderValue == "手机/邮箱/用户名"'
+Wait for me.ele.ios.qpagent to idle
+Find the "手机/邮箱/用户名" TextField
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Type '13200001111' into "手机/邮箱/用户名" TextField
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type SecureTextField
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type SecureTextField
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Find the SecureTextField
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap SecureTextField
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type SecureTextField
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Find the "密码" SecureTextField
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Type '911028' into "密码" SecureTextField
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Button
+Find: Elements matching predicate '"登录" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Button
+Find: Elements matching predicate '"登录" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Find the "登录" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "登录" Button
+Set Up
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Find: Descendants matching type Button
+Find: Elements matching predicate '"设置" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Find the "设置" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "设置" Button
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5842
+Wait for me.ele.ios.qpagent to idle
+Find the Other
+Scroll element to visible
+Assertion Failure: &lt;unknown&gt;:0: Failed to scroll to visible (by AX action) Other, 0x1c019d9b0, traits: 8589934592, error: Error -25204 performing AXAction 2003 on element &lt;XCAccessibilityElement: 0x15fe28f90&gt; pid: 5842, elementOrHash.elementID: 7720038784.378
+Synthesize event
+Tap Other
+Snapshot accessibility hierarchy for app with pid 5842
+Find the Other
+Assertion Failure: XCTestAccout.swift:146: Unable to find hit point for Other, 0x1d038ec70, traits: 8589934592
+Tear Down</system-out>
+        </testcase>
+    </testsuite>
+    <testsuite name=" ( ) XCTestWDUITests.XCTestAnonymous" tests="1" failures="0">
+        <testcase classname=" ( ) XCTestWDUITests.XCTestAnonymous" name="testCheckPath" time="64.387"></testcase>
+    </testsuite>
+    <testsuite name=" ( ) XCTestWDUITests.XCTestMy" tests="1" failures="0">
+        <testcase classname=" ( ) XCTestWDUITests.XCTestMy" name="testAcoutnPath" time="98.034"></testcase>
+    </testsuite>
+    <testsuite name=" ( ) XCTestWDUITests.XCTestSetting" tests="1" failures="1">
+        <testcase classname=" ( ) XCTestWDUITests.XCTestSetting" name="testAbouteleme" time="54.384">
+            <failure message="XCTAssertEqual failed: (&quot;&quot;) is not equal to (&quot;账户信息&quot;) - ">/Users/ztcq/Documents/workdir/fastCase/XCTestWD-master/XCTestWD/XCTestCase/XCTestCase/XCTestSetting.swift:47</failure>
+            <system-out>Start Test at 2018-01-15 15:15:46.419
+Terminate me.ele.ios.XCCase:5846
+Wait for me.ele.ios.XCCase to idle
+Launch me.ele.ios.XCCase
+Open me.ele.ios.XCCase
+Wait for me.ele.ios.XCCase to idle
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type Button
+Find: Elements matching predicate '"重置环境" IN identifiers'
+Wait for me.ele.ios.XCCase to idle
+Find the "重置环境" Button
+Synthesize event
+Wait for me.ele.ios.XCCase to idle
+Tap "重置环境" Button
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Snapshot accessibility hierarchy for app with pid 5850
+Find: Descendants matching type StaticText
+Find: Elements matching predicate '"重置成功" IN identifiers'
+Wait for accessibility to load
+Wait for me.ele.ios.qpagent to idle
+Launch me.ele.ios.qpagent
+Open me.ele.ios.qpagent
+Snapshot accessibility hierarchy for app with pid 5851
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Button
+Find: Elements matching predicate '"知道了" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Button
+Find: Elements matching predicate '"知道了" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Find the "知道了" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "知道了" Button
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Sheet
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the Alert
+Snapshot accessibility hierarchy for app with pid 5851
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Sheet
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the Alert
+Snapshot accessibility hierarchy for app with pid 5851
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find: Descendants matching type Button
+Get all elements bound by index for: Descendants matching type Button
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the "“饿了么”想给您发送通知" Alert
+Wait for com.apple.springboard to idle
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find: Descendants matching type Button
+Find: Element at index 1
+Wait for com.apple.springboard to idle
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Check for UI interruption: Descendants matching type Alert
+Find the Button
+Synthesize event
+Wait for com.apple.springboard to idle
+Tap Button
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Sheet
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the Alert
+Snapshot accessibility hierarchy for app with pid 5851
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Sheet
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the Alert
+Snapshot accessibility hierarchy for app with pid 5851
+Find the Application "me.ele.ios.qpagent" 0x1c40bfec0
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find: Descendants matching type Button
+Get all elements bound by index for: Descendants matching type Button
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find the "“饿了么”想给您发送通知" Alert
+Wait for com.apple.springboard to idle
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Find: Descendants matching type Button
+Find: Element at index 1
+Wait for com.apple.springboard to idle
+Snapshot accessibility hierarchy for app with pid 55
+Find: Descendants matching type Alert
+Check for UI interruption: Descendants matching type Alert
+Find the Button
+Synthesize event
+Wait for com.apple.springboard to idle
+Tap Button
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Button
+Find: Elements matching predicate '"关闭" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Button
+Find: Elements matching predicate '"关闭" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Alert
+Check for UI interruption: Descendants matching type Alert
+Find the "关闭" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "关闭" Button
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type TabBar
+Find: Descendants matching type Button
+Find: Elements matching predicate '"我的" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Find the "我的" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "我的" Button
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type NavigationBar
+Find the NavigationBar
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Table
+Find: Descendants matching type Cell
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Table
+Find: Descendants matching type Cell
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Find the Cell
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap Cell
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Button
+Find: Elements matching predicate '"密码登录" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Button
+Find: Elements matching predicate '"密码登录" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Find the "密码登录" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "密码登录" Button
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type NavigationBar
+Find the NavigationBar
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type TextField
+Find: Elements matching predicate 'placeholderValue == "手机/邮箱/用户名"'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type TextField
+Find: Elements matching predicate 'placeholderValue == "手机/邮箱/用户名"'
+Wait for me.ele.ios.qpagent to idle
+Find the TextField
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap TextField
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type TextField
+Find: Elements matching predicate 'placeholderValue == "手机/邮箱/用户名"'
+Wait for me.ele.ios.qpagent to idle
+Find the "手机/邮箱/用户名" TextField
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Type '13200001111' into "手机/邮箱/用户名" TextField
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type SecureTextField
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type SecureTextField
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Find the SecureTextField
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap SecureTextField
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type SecureTextField
+Find: Element at index 0
+Wait for me.ele.ios.qpagent to idle
+Find the "密码" SecureTextField
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Type '911028' into "密码" SecureTextField
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Button
+Find: Elements matching predicate '"登录" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type Button
+Find: Elements matching predicate '"登录" IN identifiers'
+Wait for me.ele.ios.qpagent to idle
+Find the "登录" Button
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap "登录" Button
+Set Up
+Snapshot accessibility hierarchy for app with pid 5851
+Find the Cell
+Wait for me.ele.ios.qpagent to idle
+Snapshot accessibility hierarchy for app with pid 5851
+Wait for me.ele.ios.qpagent to idle
+Find the Cell
+Synthesize event
+Wait for me.ele.ios.qpagent to idle
+Tap Cell
+Snapshot accessibility hierarchy for app with pid 5851
+Find: Descendants matching type NavigationBar
+Find the NavigationBar
+Assertion Failure: XCTestSetting.swift:47: XCTAssertEqual failed: ("") is not equal to ("账户信息") - 
+Tear Down</system-out>
+        </testcase>
+    </testsuite>
+</testsuites>
