@@ -102,10 +102,9 @@ struct Test: HTML
                 return accumulator + test.html
             }) ?? "",
             "HAS_ACTIVITIES_CLASS": (activities == nil) ? "no-drop-down" : "",
-            "ACTIVITIES":"",
-//            "ACTIVITIES": activities?.reduce("", { (accumulator: String, activity: Activity) -> String in
-//                return accumulator + activity.html
-//            }) ?? "",
+            "ACTIVITIES": activities?.reduce("", { (accumulator: String, activity: Activity) -> String in
+                return accumulator + activity.html
+            }) ?? "",
             "ICON_CLASS": status.cssClass,
             "ITEM_CLASS": objectClass.cssClass,
             "LIST_ITEM_CLASS": objectClass == .testSummary ? "list-item" : ""

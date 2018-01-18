@@ -90,16 +90,23 @@ struct ChartModel{
 //最终返回的model
 struct resultModel{
     var device :  Dictionary<String, Any>
-    var overview : Array<Dictionary<String, Any>>{
-        return self.overviewData()
+    
+    var overviewData : Dictionary<String, Any>{
+        let success = self.testModel.amountSuccessTests
+        let total = self.testModel.amountSubTests
+        return ["success":success,"total":total]
+    }
+    
+    var overviewReport : Array<Dictionary<String, Any>>{
+        return self.overviewReportData()
     }
     var testModel :testModel
-    //测试套S
-    var suites : Dictionary<String, Any>{
+    //测试套
+    var suitesReport : Dictionary<String, Any>{
         return self.suiteData()
     }
     //时间
-    var duration : Dictionary<String, Any>{
+    var durationReport : Dictionary<String, Any>{
         return self.durationData()
     }
     
@@ -108,7 +115,8 @@ struct resultModel{
         self.device = device.dictionary
     }
     
-    func overviewData()->Array<Dictionary<String, Any>>{
+    
+    func overviewReportData()->Array<Dictionary<String, Any>>{
         let success = self.testModel.amountSuccessTests
         let fail = self.testModel.amountSubTests - success
         let chartModel1 = ChartModel.init(value: fail, name: "失败")
@@ -116,20 +124,21 @@ struct resultModel{
         return [chartModel1.dictionary,chartModel2.dictionary]
     }
     
+    
     func suiteData()->Dictionary<String, Any>{
-        let names = self.testModel.subTests?.map({$0.name})
-        let successs = self.testModel.subTests?.map({$0.amountSuccessTests})
-        let fails = self.testModel.subTests?.map({$0.amountFailTests})
-        var suites = Array<Dictionary<String, Any>>()
-        for index in 0...(names?.count)!-1 {
-            let name  = names![index]
-            let chartModel1 = ChartModel.init(value: successs![index], name: "成功")
-            let chartModel2 = ChartModel.init(value: fails![index], name: "失败")
-            let dic = [name:[chartModel1.dictionary,chartModel2.dictionary]]
-            suites.append(dic)
+        if let subTests = testModel.subTests {
+            let names = subTests.map({$0.name})
+            let suites2 = subTests.map({ (model) -> Array<Dictionary<String, Array<Dictionary<String, Any>>>> in
+                let chartModel1 = ChartModel(value: model.amountSuccessTests, name: "成功")
+                let chartModel2 = ChartModel(value: model.amountFailTests, name: "失败")
+                return [[model.name : [chartModel1.dictionary,chartModel2.dictionary]]]
+            })
+            return ["suitesname" : names,"suites" : suites2]
         }
-        return ["suitesname":names!,"suites":suites]
+        return ["suitesname":[],"suites":[]]
     }
+    
+
     
     func durationData()->Dictionary<String, Any>{
         let names = self.testModel.subTests?.map({$0.name})
@@ -149,9 +158,13 @@ struct resultModel{
     var dictionary: [String: Any] {
         return [
             "device": device,
-            "overview": overview,
-            "suites":suites,
-            "duration":duration
+            "overview":overviewData,
+            "report":[
+                "trend":["11":[1,3,4],"2":[1,2,3]],
+                "overview": overviewReport,
+                "suites":suitesReport,
+                "duration":durationReport
+            ]
         ]
     }
     
