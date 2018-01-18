@@ -33,7 +33,7 @@ if !command.isValid {
 
 //处理数据
 let summary = Summary(root: result.value!)
-let sum  = TestableSummaries(root: result.value!)
+let summary2  = TestableSummaries(root: result.value!)
 
 
 
@@ -50,5 +50,8 @@ do {
 catch let e {
     Logger.error("An error has occured while creating the report. Error: \(e)")
 }
+
+let data = summary2.data
+file.write(dict: data, name: "data.json")
 
 exit(EXIT_SUCCESS)

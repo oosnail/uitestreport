@@ -11,7 +11,7 @@ import Foundation
 class TestableSummaries{
     private let filename = "action_TestSummaries.plist"
 //    var runs = [runTest]()
-    var tests = [Test]()
+    var data :Dictionary<String, Any>
     
     init(root: String)
     {
@@ -35,12 +35,7 @@ class TestableSummaries{
         
         let path = plistPath[0]
         let run = runTest(root: root, path: path)
-        run.setResult()
-//        for path in plistPath {
-//            let run = runTest(root: root, path: path)
-//            runs.append(run)
-//        }
-        
+        self.data = run.setResult()
     }
 
 }
@@ -75,8 +70,6 @@ class runTest:NSObject{
         let array = dic4["Subtests"] as! [[String: Any]]
         let dic5 = array[0]
         self.testData = testModel.init(dict: dic5)
-//        file.write(dict: rootdic, name: "demo.json")
-
     }
     
     func addlog(_ fullpath:String){
@@ -134,9 +127,9 @@ class runTest:NSObject{
     
 }
     
-    func setResult(){
+    func setResult()->Dictionary<String, Any>{
         let res = resultModel.init(device: self.targetDevice, testData: self.testData)
-        print(res.dictionary)
+        return res.dictionary
     }
     
     var value: [String: Any] {
@@ -152,13 +145,12 @@ class runTest:NSObject{
 class file: NSObject {
     class func write(dict:Dictionary<String, Any>,name:String) -> Void {
         let data : NSData! = try? JSONSerialization.data(withJSONObject: dict, options: []) as NSData!
-        //        let JSONString = NSString(data:data as Data,encoding: String.Encoding.utf8.rawValue)
         let logs = String(data: data as Data, encoding: .utf8)!
         
         do {
             let file = "\(result.value!)/\(name)"
-            
             try logs.write(toFile: file, atomically: false, encoding: .utf8)
+            Logger.success("\nReport data successfully created at \(file)")
         }
         catch let e {
             Logger.error("An error has occured while create the activity log file. Error: \(e)")
