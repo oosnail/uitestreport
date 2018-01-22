@@ -29,6 +29,8 @@ struct testModel{
         return 0
     }
     
+
+    
     //多少个成功test
     var amountSuccessTests: Int {
         if let subTests = subTests {
@@ -116,6 +118,23 @@ struct resultModel{
     }
     
     
+    var trend : Dictionary<String,Any>{
+//        //获取plist
+        
+//        //test
+//        let trendPath = "/Users/ztcq/agent/iospackage/trend.json"
+//        if !FileManager.default.fileExists(atPath: trendPath) {
+//            try "{}".write(toFile: trendPath, atomically: false, encoding: .utf8)
+//        }else{
+//            let orgDict = NSDictionary(contentsOfFile: trendPath)
+//            let newDict = ["2":"2"]
+//        }
+
+        return ["success":[1,3,4],"fail":[1,2,3],"name":["1","2","3"]]
+    }
+    
+    
+    
     func overviewReportData()->Array<Dictionary<String, Any>>{
         let success = self.testModel.amountSuccessTests
         let fail = self.testModel.amountSubTests - success
@@ -160,7 +179,7 @@ struct resultModel{
             "device": device,
             "overview":overviewData,
             "report":[
-                "trend":["11":[1,3,4],"2":[1,2,3]],
+                "trend":trend,
                 "overview": overviewReport,
                 "suites":suitesReport,
                 "duration":durationReport

@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 var version = "1.4.0"
 
 print("XCTestHTMLReport \(version)")
@@ -23,9 +24,11 @@ var verbose = BlockArgument("v", "", required: false, helpMessage: "Provide addi
 
 var result = ValueArgument(.path, "r", "resultBundePath", required: false, helpMessage: "Path to the result bundle")
 
-result.value = "/Users/ztcq/Documents/workdir/uitestreport/casereport"
+var jobnum = ValueArgument(.num, "j", "jobnum", required: false, helpMessage: "jenkins job number")
 
-command.arguments = [help, verbose, result]
+command.arguments = [help, verbose, result,jobnum]
+jobnum.value = "jobnum2"
+result.value = "/Users/ztcq/Documents/workdir/uitestreport/casereport"
 if !command.isValid {
     print(command.usage)
     exit(EXIT_FAILURE)

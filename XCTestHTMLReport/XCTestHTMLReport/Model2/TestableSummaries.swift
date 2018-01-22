@@ -8,9 +8,11 @@
 
 import Foundation
 
+//趋势存储的最大数量
+let trendnum = 10
+
 class TestableSummaries{
     private let filename = "action_TestSummaries.plist"
-//    var runs = [runTest]()
     var data :Dictionary<String, Any>
     
     init(root: String)
@@ -128,8 +130,39 @@ class runTest:NSObject{
 }
     
     func setResult()->Dictionary<String, Any>{
+        //设置trend
+        self.settrendData()
         let res = resultModel.init(device: self.targetDevice, testData: self.testData)
         return res.dictionary
+    }
+    
+    
+    func settrendData(){
+        //test
+        let trendPath = "/Users/ztcq/agent/iospackage/trend.json"
+        var newDict : Dictionary<String,Any>!
+
+        var orgDict : Dictionary<String,Any>!
+        
+        if let content = try? String.init(contentsOfFile: trendPath){
+            let data = content.data(using: String.Encoding.utf8)
+            if let dict = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers){
+                orgDict = dict as! Dictionary<String, Any>
+            }
+        }
+        print(orgDict.description )
+        let addDic:[String : Any]  = ["jobnum":jobnum.value ?? "jobnum","fail":32,"success":22]
+        //添加
+        newDict = orgDict
+        //删除
+        var array = newDict["trend"]! as! Array<Dictionary<String,Any>>
+        array.append(addDic)
+        if array.count > trendnum{
+            let i = array.count-trendnum
+            array.removeSubrange(0..<i)
+        }
+        newDict["trend"] = array
+        file.write(dict: newDict, name: trendPath)
     }
     
     var value: [String: Any] {
@@ -137,6 +170,17 @@ class runTest:NSObject{
             "device": targetDevice,
             "TEST_SUMMARIES": ""
         ]
+    }
+    
+    func getJSONStringFromDictionary(dictionary:NSDictionary) -> String {
+        if (!JSONSerialization.isValidJSONObject(dictionary)) {
+            print("无法解析出JSONString")
+            return ""
+        }
+        let data : NSData! = try? JSONSerialization.data(withJSONObject: dictionary, options: []) as NSData!
+        let JSONString = NSString(data:data as Data,encoding: String.Encoding.utf8.rawValue)
+        return JSONString! as String
+        
     }
 
 }
@@ -148,7 +192,7 @@ class file: NSObject {
         let logs = String(data: data as Data, encoding: .utf8)!
         
         do {
-            let file = "\(result.value!)/\(name)"
+            let file = name
             try logs.write(toFile: file, atomically: false, encoding: .utf8)
             Logger.success("\nReport data successfully created at \(file)")
         }

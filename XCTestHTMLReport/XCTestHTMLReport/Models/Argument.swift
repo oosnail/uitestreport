@@ -13,6 +13,7 @@ class Argument
     enum ArgumentType: String {
         case path = "path"
         case bool = "bool"
+        case num = "jobnum"
     }
 
     let shortFlag: String
@@ -54,6 +55,8 @@ class ValueArgument: Argument
         switch type {
         case .path:
             return (FileManager.default.fileExists(atPath: value), "Invalid path: \(value)")
+        case .num:
+            return (true,"jobnum")
         default:
             return (false, "")
         }

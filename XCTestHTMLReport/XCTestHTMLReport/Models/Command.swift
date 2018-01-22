@@ -21,7 +21,7 @@ struct Command
             let argument = arguments[index]
             let argWithDash = "-" + argument.shortFlag
 
-            let argIndex = CommandLine.arguments.index(of: argWithDash)
+            var argIndex = CommandLine.arguments.index(of: argWithDash)
             if argument.required {
                 if argIndex == nil {
                     Logger.error("Argument \(argWithDash) is required")
@@ -34,7 +34,10 @@ struct Command
                     blockArgument.block()
                 }
             } else if let valueArgument = argument as? ValueArgument {
-                let valueIndex = argIndex! + 1
+                guard let argIndex = argIndex else{
+                    return false
+                }
+                let valueIndex = argIndex + 1
                 if CommandLine.arguments.count == valueIndex || flagIndexes.contains(valueIndex) {
                     Logger.error("No value was passed for argument \(argWithDash)")
                     return false
